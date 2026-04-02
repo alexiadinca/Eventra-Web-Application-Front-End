@@ -20,6 +20,9 @@ body {
   color: var(--text-main);
   font-family: 'Montserrat', sans-serif;
   line-height: 1.6;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
 img {
@@ -48,6 +51,7 @@ input {
   position: sticky;
   top: 0;
   z-index: 1000;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
 }
 
 .nav-wrapper {
@@ -62,10 +66,12 @@ input {
   font-size: 3rem;
   font-weight: 600;
   color: #f5ebdf;
+  letter-spacing: 0.5px;
 }
 
 .main-nav {
   display: flex;
+  align-items: center;
   gap: 28px;
   flex-wrap: wrap;
 }
@@ -73,7 +79,9 @@ input {
 .main-nav a {
   color: #f7ede2;
   font-size: 1.05rem;
+  font-weight: 500;
   position: relative;
+  transition: 0.3s ease;
 }
 
 .main-nav a::after {
@@ -87,13 +95,13 @@ input {
   transition: width 0.3s ease;
 }
 
-.main-nav a:hover::after,
-.main-nav a.active::after {
+.main-nav a:hover::after {
   width: 100%;
 }
 
 .edit-page {
   padding: 70px 0 90px;
+  flex: 1;
 }
 
 .edit-wrapper {
@@ -236,11 +244,19 @@ input {
   display: grid;
   grid-template-columns: 1.2fr 1fr 1fr 1.4fr;
   gap: 36px;
+  align-items: start;
 }
 
 .footer-brand img {
-  width: 72px;
-  margin-bottom: 16px;
+  width: 50px;
+  margin-bottom: 20px;
+}
+
+.footer-brand p,
+.footer-contact p,
+.footer-newsletter p {
+  color: #eadfd4;
+  font-size: 0.95rem;
 }
 
 .footer-links h4,
@@ -257,6 +273,15 @@ input {
   gap: 10px;
 }
 
+.footer-links a {
+  color: #f5ebdf;
+  transition: 0.3s ease;
+}
+
+.footer-links a:hover {
+  opacity: 0.8;
+}
+
 .newsletter-form {
   display: flex;
   flex-direction: column;
@@ -268,6 +293,7 @@ input {
   padding: 14px 16px;
   border: none;
   border-radius: 10px;
+  outline: none;
 }
 
 .newsletter-form button {
@@ -278,13 +304,20 @@ input {
   border-radius: 10px;
   cursor: pointer;
   font-weight: 700;
+  transition: 0.3s ease;
+}
+
+.newsletter-form button:hover {
+  background-color: #fff7ef;
 }
 
 .footer-bottom {
   text-align: center;
   padding: 26px 0 20px;
   margin-top: 34px;
-  border-top: 1px solid rgba(255,255,255,0.16);
+  border-top: 1px solid rgba(255, 255, 255, 0.16);
+  font-size: 0.95rem;
+  color: #eadfd4;
 }
 
 @media (max-width: 1000px) {
@@ -298,6 +331,10 @@ input {
   .nav-wrapper {
     flex-direction: column;
     align-items: flex-start;
+  }
+
+  .main-nav {
+    gap: 16px;
   }
 
   .form-row {
