@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Eventra | Profile</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styleprofile.css" />
+</head>
+
+<body>
+
+  <!-- HEADER -->
+  <header class="site-header">
+    <div class="container nav-wrapper">
+      <a href="index.html" class="brand">Eventra</a>
+
+      <nav class="main-nav">
+        <a href="events.html">Events</a>
+        <a href="create-event.html">Create Event</a>
+        <a href="profile.html" class="active">Profile</a>
+        <a href="sign-in.html">Sign In</a>
+        <a href="about.html">About Us</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- PROFILE PAGE -->
+  <main class="profile-page">
+    <div class="container">
+      <section class="profile-header">
+        <h1>Profile</h1>
+        <p>Your Eventra account overview, personal QR access and registered events.</p>
+      </section>
+
+      <section class="profile-top">
+        <!-- LEFT PROFILE CARD -->
+        <div class="profile-card">
+          <div class="avatar-wrapper">
+            <div class="avatar-circle">
+              <div class="avatar-head"></div>
+              <div class="avatar-body"></div>
+            </div>
+          </div>
+
+          <div class="profile-info">
+            <div class="info-grid">
+              <div class="info-item">
+                <span class="label">First Name</span>
+                <p id="profileFirstName">Student</p>
+            </div>
+
+            <div class="info-item">
+             <span class="label">Last Name</span>
+             <p id="profileLastName">Briceag</p>
+           </div>
+
+            <div class="info-item">
+             <span class="label">Phone Number</span>
+             <p id="profilePhone">+40 712 345 678</p>
+           </div>
+
+            <div class="info-item">
+             <span class="label">Email</span>
+             <p id="profileEmail">studentbriceag@email.com</p>
+           </div>
+            </div>
+
+            <div class="profile-actions">
+              <a href="edit-profile.html" class="edit-link-btn">Edit Profile</a>
+              <button class="secondary">Download QR</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- QR CARD -->
+        <div class="qr-card">
+          <h2>Your guest QR Code</h2>
+          <div class="qr-box">
+            <img src="Images/QrCode.png" alt="Guest QR code">
+          </div>
+          <p class="qr-note">Scan at entrance!</p>
+          <p class="qr-desc">
+            This QR code will later be generated automatically for each user based on profile data.
+          </p>
+        </div>
+      </section>
+
+      <!-- NOTIFICATIONS -->
+      <section class="profile-section">
+        <div class="section-title">
+          <h2>Notifications</h2>
+        </div>
+
+        <div class="notification-list">
+          <div class="notification-card">
+            <h3>Opening of Borcelle Coffee</h3>
+            <p>Your registration is confirmed. Please arrive 15 minutes before the event starts.</p>
+          </div>
+
+          <div class="notification-card">
+            <h3>Business Conference</h3>
+            <p>You have been added to the attendee list. Your QR entry pass is available in your profile.</p>
+          </div>
+
+          <div class="notification-card">
+            <h3>Newsletter Update</h3>
+            <p>New featured events were added this week in Bucharest and Craiova.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- EVENTS AREA -->
+      <section class="events-overview">
+        <div class="events-column">
+          <div class="section-title">
+            <h2>Future Events</h2>
+          </div>
+
+          <div class="mini-event-card">
+            <img src="Images/Opening Event.png" alt="Opening Event">
+            <div>
+              <h3>Opening of Borcelle Coffee</h3>
+              <p>September 8 • Bucharest • 6:00 PM</p>
+            </div>
+          </div>
+
+          <div class="mini-event-card">
+            <img src="Images/AIEvent.png" alt="AI Event">
+            <div>
+              <h3>Boost Your Business AI Event</h3>
+              <p>October 5, 2026 • Craiova • 7:00 PM</p>
+            </div>
+          </div>
+
+          <div class="mini-event-card">
+            <img src="Images/BusinessConferene Event.png" alt="Business Conference">
+            <div>
+              <h3>Business Conference</h3>
+              <p>June 22, 2026 • Hilton Garden Inn, Craiova</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="events-column">
+          <div class="section-title">
+            <h2>Waiting List</h2>
+          </div>
+
+          <div class="waiting-card">
+            <h3>Wine and Cheese Night</h3>
+            <p>You are currently on the waiting list. We’ll notify you if a place becomes available.</p>
+          </div>
+
+          <div class="waiting-card">
+            <h3>Flower Market</h3>
+            <p>Your spot is pending confirmation due to limited capacity.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- PAST EVENTS -->
+      <section class="profile-section">
+        <div class="section-title">
+          <h2>Past Events</h2>
+        </div>
+
+        <div class="past-events-grid">
+          <div class="past-card">
+            <img src="Images/Art Exhibition Event Poster.png" alt="Art Exhibition">
+            <h3>Art Exhibition</h3>
+            <p>Attended in May 2030</p>
+          </div>
+
+          <div class="past-card">
+            <img src="Images/Bloom Cafe Event.png" alt="Bloom Cafe Event">
+            <h3>Bloom Cafe Style Event</h3>
+            <p>Attended in June 2026</p>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <img src="Images/LogoEventra.png" alt="Eventra logo">
+        <p>Discover events near you.</p>
+      </div>
+
+      <div class="footer-links">
+        <h4>Quick Links</h4>
+        <a href="index.html">Home</a>
+        <a href="events.html">Events</a>
+        <a href="create-event.html">Create Event</a>
+        <a href="sign-in.html">Sign In</a>
+      </div>
+
+      <div class="footer-contact">
+        <h4>Contact Us</h4>
+        <p>Email: contact@eventra.com</p>
+        <p>Phone: +40 700 123 456</p>
+        <p>Romania</p>
+      </div>
+
+      <div class="footer-newsletter">
+        <h4>Newsletter</h4>
+        <p>Get updates about trending events, new organizers and upcoming experiences.</p>
+        <form class="newsletter-form">
+          <input type="email" placeholder="Your email address">
+          <button type="submit">Subscribe</button>
+        </form>
+      </div>
+    </div>
+
+    <div class="container footer-bottom">
+      <p>© Copyright 2026. All rights reserved — Eventra RO</p>
+    </div>
+  </footer>
+
+
+</body>
+</html>

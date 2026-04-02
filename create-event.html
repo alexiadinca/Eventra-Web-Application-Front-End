@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Eventra | Create Event</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="stylecreateevent.css" />
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container nav-wrapper">
+      <a href="index.html" class="brand">Eventra</a>
+
+      <nav class="main-nav">
+        <a href="events.html">Events</a>
+        <a href="create-event.html" class="active">Create Event</a>
+        <a href="profile.html">Profile</a>
+        <a href="sign-in.html">Sign In</a>
+        <a href="about.html">About Us</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="create-page">
+    <div class="container">
+      <section class="create-hero">
+        <p class="eyebrow">For organizers and creators</p>
+        <h1>Create a New Event</h1>
+        <p class="intro-text">
+          Publish elegant experiences on Eventra and let people discover your conference, exhibition,
+          workshop, market, tasting, launch or special event.
+        </p>
+      </section>
+
+      <section class="create-layout">
+        <div class="create-info-card">
+          <h2>What makes a great event page?</h2>
+          <ul>
+            <li>Choose a clear and memorable title.</li>
+            <li>Add the correct date, hour and location.</li>
+            <li>Write a short, but attractive description.</li>
+            <li>Upload a visually strong poster or banner.</li>
+            <li>Set capacity and access details clearly.</li>
+          </ul>
+
+          <div class="tips-box">
+            <h3>Organizer Tips</h3>
+            <p>
+              Clean event descriptions and strong visuals help users decide faster.
+              A complete event page feels more trustworthy and professional.
+            </p>
+          </div>
+        </div>
+
+        <div class="create-form-card">
+          <h2>Event Details</h2>
+          <p class="form-subtitle">Fill in the details below to publish your event.</p>
+
+          <form id="createEventForm" class="create-form">
+            <div class="input-group">
+              <label for="event-title">Event Title</label>
+              <input type="text" id="event-title" name="event-title" placeholder="Ex: Business Conference 2026" required>
+            </div>
+
+            <div class="form-row">
+              <div class="input-group">
+                <label for="organizer-name">Organizer Name</label>
+                <input type="text" id="organizer-name" name="organizer-name" placeholder="Ex: Eventra Studio" required>
+              </div>
+
+              <div class="input-group">
+                <label for="event-type">Event Type</label>
+                <select id="event-type" name="event-type" required>
+                  <option value="">Select type</option>
+                  <option value="conference">Conference</option>
+                  <option value="exhibition">Exhibition</option>
+                  <option value="opening">Opening Event</option>
+                  <option value="food">Food & Drinks</option>
+                  <option value="technology">Technology</option>
+                  <option value="market">Market</option>
+                  <option value="workshop">Workshop</option>
+                  <option value="other">Other</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="input-group">
+                <label for="event-date">Date</label>
+                <input type="date" id="event-date" name="event-date" required>
+              </div>
+
+              <div class="input-group">
+                <label for="event-time">Hour</label>
+                <input type="time" id="event-time" name="event-time" required>
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="input-group">
+                <label for="city">City</label>
+                <input type="text" id="city" name="city" placeholder="Ex: Bucharest" required>
+              </div>
+
+              <div class="input-group">
+                <label for="location">Location</label>
+                <input type="text" id="location" name="location" placeholder="Ex: Hilton Garden Inn" required>
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="input-group">
+                <label for="capacity">Capacity</label>
+                <input type="number" id="capacity" name="capacity" placeholder="Ex: 100" min="1" required>
+              </div>
+
+              <div class="input-group">
+                <label for="price">Ticket Price</label>
+                <input type="text" id="price" name="price" placeholder="Ex: Free / 50 RON / 15 EUR">
+              </div>
+            </div>
+
+            <div class="input-group">
+              <label for="description">Event Description</label>
+              <textarea id="description" name="description" rows="6" placeholder="Describe the event, what guests can expect, who it is for, and why they should attend." required></textarea>
+            </div>
+
+            <div class="input-group">
+              <label for="poster">Event Poster / Banner</label>
+              <input type="file" id="poster" name="poster" accept="image/*">
+            </div>
+
+            <div class="checkbox-group">
+              <label>
+                <input type="checkbox" id="free-entry">
+                <span>This event has free entry</span>
+              </label>
+            </div>
+
+            <div class="checkbox-group">
+              <label>
+                <input type="checkbox" required>
+                <span>I confirm that the event details are correct and ready to be published.</span>
+              </label>
+            </div>
+
+            <div class="form-actions">
+              <button type="submit" class="publish-btn">Publish Event</button>
+              <button type="reset" class="secondary-btn">Reset</button>
+            </div>
+
+            <p id="successMessage" class="success-message"></p>
+          </form>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <img src="Images/LogoEventra.png" alt="Eventra logo">
+        <p>Discover events near you.</p>
+      </div>
+
+      <div class="footer-links">
+        <h4>Quick Links</h4>
+        <a href="index.html">Home</a>
+        <a href="events.html">Events</a>
+        <a href="create-event.html">Create Event</a>
+        <a href="profile.html">Profile</a>
+      </div>
+
+      <div class="footer-contact">
+        <h4>Contact Us</h4>
+        <p>Email: contact@eventra.com</p>
+        <p>Phone: +40 700 123 456</p>
+        <p>Romania</p>
+      </div>
+
+      <div class="footer-newsletter">
+        <h4>Newsletter</h4>
+        <p>Get updates about trending events, new organizers and upcoming experiences.</p>
+        <form class="newsletter-form">
+          <input type="email" placeholder="Your email address">
+          <button type="submit">Subscribe</button>
+        </form>
+      </div>
+    </div>
+
+    <div class="container footer-bottom">
+      <p>© Copyright 2026. All rights reserved — Eventra RO</p>
+    </div>
+  </footer>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const form = document.getElementById("createEventForm");
+      const successMessage = document.getElementById("successMessage");
+      const freeEntryCheckbox = document.getElementById("free-entry");
+      const priceInput = document.getElementById("price");
+
+      freeEntryCheckbox.addEventListener("change", function () {
+        if (this.checked) {
+          priceInput.value = "Free Entrance";
+          priceInput.setAttribute("readonly", true);
+        } else {
+          priceInput.value = "";
+          priceInput.removeAttribute("readonly");
+        }
+      });
+
+      form.addEventListener("submit", function (e) {
+        e.preventDefault();
+
+        successMessage.textContent = "Your event has been created successfully!";
+      });
+    });
+  </script>
+
+</body>
+</html>
